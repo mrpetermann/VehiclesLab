@@ -1,4 +1,4 @@
-public class Truck extends Vehicle{
+public class Truck extends Vehicle implements IDrivable {
     private int towingCapacity;
 
     public Truck(int w, int c, int tc) {
@@ -12,5 +12,15 @@ public class Truck extends Vehicle{
 
     public void setTowingCapacity(int towingCapacity) {
         this.towingCapacity = towingCapacity;
+    }
+
+    @Override
+    public void drive() {
+        System.out.println("Ugga dugga");
+    }
+
+    @Override
+    public String toString() {
+        return "Truck";
     }
 }
